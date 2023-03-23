@@ -20,11 +20,12 @@ namespace ConsoleSnail
                 bool checkRows = false;
                 do
                 {
-                    Console.Write(Messages.RowValue);
+                    Console.Write("Enter number of rows (maximum 10): ");
                     checkRows = int.TryParse(Console.ReadLine(), out rows);
-                    if (!checkRows)
-                    {
-                        Console.WriteLine(Messages.RowValueError);
+                    if (!checkRows || rows < 1 || rows > 10)
+                {
+                        Console.WriteLine("Invalid input. Please enter a number between 1 and 10.");
+                        checkRows = false;
                     }
                 } while (!checkRows);
 
@@ -32,43 +33,36 @@ namespace ConsoleSnail
                 bool checkColumns = false;
                 do
                 {
-                    Console.Write(Messages.ColumnValue);
+                    Console.Write("Enter number of columns (maximum 10): ");
                     checkColumns = int.TryParse(Console.ReadLine(), out columns);
-                    if (!checkColumns)
-                    {
-                        Console.WriteLine(Messages.ColumnValueError);
+                    if (!checkColumns || columns < 1 || columns > 10)
+                {
+                        Console.WriteLine("Invalid input. Please enter a number between 1 and 10.");
+                        checkColumns = false;
                     }
                 } while (!checkColumns);
 
+                // Create a new matrix with the specified number of rows and columns
                 int[,] matrix = new int[rows, columns];
 
-                Console.WriteLine();
-
-                int i = 0;
-                int j = 0;
-                for (i = 0; i < rows; i++)
+                // Create an array to keep track of used numbers and generate random numbers to fill the matrix
+                bool[] usedNumbers = new bool[100];
+                Random rand = new Random();
+                for (int i = 0; i < rows; i++)
                 {
-                    Console.WriteLine($"Enter elements of {i + 1} row separated by spaces: ");
-                    string[] rowElements = Console.ReadLine().Split(' ');
-
-                    // Input validation for row elements
-                    if (rowElements.Length != columns)
+                    for (int j = 0; j < columns; j++)
                     {
-                        Console.WriteLine($"Invalid input. Please enter {columns} integer values for {i + 1} row.");
-                        i--;
-                        continue;
-                    }
-
-                    for (j = 0; j < columns; j++)
-                    {
-                        if (!int.TryParse(rowElements[j], out matrix[i, j]))
+                        int randomNum = rand.Next(100);
+                        while (usedNumbers[randomNum])
                         {
-                            Console.WriteLine($"Invalid input. Please enter an integer value for {i + 1}row and {j + 1} column.");
-                            j--;
+                            randomNum = rand.Next(100);
                         }
+                        usedNumbers[randomNum] = true;
+                        matrix[i, j] = randomNum;
                     }
                 }
 
+                // Get the elements of the matrix in a spiral order
                 int[] spiralArray = obj.ReadAsSpiral(matrix, out int[,] spiralMatrix);
                 Console.WriteLine();
                 Console.WriteLine(Messages.FirstResultStr);
@@ -76,9 +70,9 @@ namespace ConsoleSnail
 
                 Console.WriteLine();
                 Console.WriteLine(Messages.SecondResultStr);
-                for (i = 0; i < rows; i++)
+                for (int i = 0; i < rows; i++)
                 {
-                    for (j = 0; j < columns; j++)
+                    for (int j = 0; j < columns; j++)
                     {
                         Console.Write($"{spiralMatrix[i, j],3} ");
                     }
