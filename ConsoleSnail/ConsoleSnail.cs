@@ -70,14 +70,35 @@ namespace ConsoleSnail
 
                 Console.WriteLine();
                 Console.WriteLine(Messages.SecondResultStr);
+
                 for (int i = 0; i < rows; i++)
                 {
                     for (int j = 0; j < columns; j++)
                     {
-                        Console.Write($"{spiralMatrix[i, j],3} ");
+                        if (i == j)
+                        {
+                            Console.BackgroundColor = ConsoleColor.Green;
+                            Console.ForegroundColor = ConsoleColor.Black;
+                            Console.Write($"{spiralMatrix[i, j],3} ");
+                            Console.ResetColor();
+
+                        }
+                        else 
+                        {
+                            Console.Write($"{spiralMatrix[i, j],3} ");
+                        }
                     }
                     Console.WriteLine();
                 }
+
+                Console.WriteLine();
+                int diagonalSum = 0;
+                for (int i = 0; i < Math.Min(rows, columns); i++)
+                {
+                    diagonalSum += spiralMatrix[i, i];
+                }
+                Console.WriteLine(Messages.DiagonalSum + diagonalSum);
+                Console.WriteLine();
 
                 Console.WriteLine();
                 Console.WriteLine(Messages.RestartOption);
