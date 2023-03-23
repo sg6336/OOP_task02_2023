@@ -20,11 +20,11 @@ namespace ConsoleSnail
                 bool checkRows = false;
                 do
                 {
-                    Console.Write("Enter number of rows (maximum 10): ");
+                    Console.Write(Messages.RowValue + " ");
                     checkRows = int.TryParse(Console.ReadLine(), out rows);
                     if (!checkRows || rows < 1 || rows > 10)
                 {
-                        Console.WriteLine("Invalid input. Please enter a number between 1 and 10.");
+                        Console.WriteLine(Messages.ValueError);
                         checkRows = false;
                     }
                 } while (!checkRows);
@@ -33,11 +33,11 @@ namespace ConsoleSnail
                 bool checkColumns = false;
                 do
                 {
-                    Console.Write("Enter number of columns (maximum 10): ");
+                    Console.Write(Messages.ColumnValue + " ");
                     checkColumns = int.TryParse(Console.ReadLine(), out columns);
                     if (!checkColumns || columns < 1 || columns > 10)
                 {
-                        Console.WriteLine("Invalid input. Please enter a number between 1 and 10.");
+                        Console.WriteLine(Messages.ValueError);
                         checkColumns = false;
                     }
                 } while (!checkColumns);
@@ -97,7 +97,7 @@ namespace ConsoleSnail
                 {
                     diagonalSum += spiralMatrix[i, i];
                 }
-                Console.WriteLine(Messages.DiagonalSum + diagonalSum);
+                Console.WriteLine(Messages.DiagonalSum + " " + diagonalSum);
                 Console.WriteLine();
 
                 Console.WriteLine();
