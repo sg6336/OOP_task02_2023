@@ -61,20 +61,11 @@ namespace ConsoleSnail.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Enter the number of columns in the matrix: .
+        ///   Looks up a localized string similar to Enter number of columns (maximum 10):.
         /// </summary>
         public static string ColumnValue {
             get {
                 return ResourceManager.GetString("ColumnValue", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Invalid input. Please enter an integer value for columns..
-        /// </summary>
-        public static string ColumnValueError {
-            get {
-                return ResourceManager.GetString("ColumnValueError", resourceCulture);
             }
         }
         
@@ -124,20 +115,11 @@ namespace ConsoleSnail.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Enter the number of rows in the matrix: .
+        ///   Looks up a localized string similar to Enter number of rows (maximum 10):.
         /// </summary>
         public static string RowValue {
             get {
                 return ResourceManager.GetString("RowValue", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Invalid input. Please enter an integer value for rows..
-        /// </summary>
-        public static string RowValueError {
-            get {
-                return ResourceManager.GetString("RowValueError", resourceCulture);
             }
         }
         
@@ -147,6 +129,15 @@ namespace ConsoleSnail.Resources {
         public static string SecondResultStr {
             get {
                 return ResourceManager.GetString("SecondResultStr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid input. Please enter a number between 1 and 10..
+        /// </summary>
+        public static string ValueError {
+            get {
+                return ResourceManager.GetString("ValueError", resourceCulture);
             }
         }
     }
