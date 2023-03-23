@@ -123,12 +123,18 @@
   <data name="ColumnValueError" xml:space="preserve">
     <value>Invalid input. Please enter an integer value for columns.</value>
   </data>
+  <data name="DiagonalSum" xml:space="preserve">
+    <value>Sum of elements on main diagonal is:</value>
+  </data>
   <data name="FirstResultStr" xml:space="preserve">
     <value>1D Spiral Array:</value>
   </data>
   <data name="Greetings" xml:space="preserve">
     <value>* Name: Snail
-* Function: 
+* Function:
+- Users input matrix dimensions into the program (columns and lines).
+- Program fill matrix with random numbers (from 0 till 100 included).
+- More on github page
 * Author: Oleksandr Leoshko
 * Co-author: Maksym Oganesyan
 * Date: 14.03.2023

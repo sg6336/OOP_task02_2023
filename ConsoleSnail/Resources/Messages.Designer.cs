@@ -22,7 +22,7 @@ namespace ConsoleSnail.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Messages {
+    public class Messages {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace ConsoleSnail.Resources {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ConsoleSnail.Resources.Messages", typeof(Messages).Assembly);
@@ -51,7 +51,7 @@ namespace ConsoleSnail.Resources {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace ConsoleSnail.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Enter the number of columns in the matrix: .
         /// </summary>
-        internal static string ColumnValue {
+        public static string ColumnValue {
             get {
                 return ResourceManager.GetString("ColumnValue", resourceCulture);
             }
@@ -72,16 +72,25 @@ namespace ConsoleSnail.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Invalid input. Please enter an integer value for columns..
         /// </summary>
-        internal static string ColumnValueError {
+        public static string ColumnValueError {
             get {
                 return ResourceManager.GetString("ColumnValueError", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sum of elements on main diagonal is:.
+        /// </summary>
+        public static string DiagonalSum {
+            get {
+                return ResourceManager.GetString("DiagonalSum", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 1D Spiral Array:.
         /// </summary>
-        internal static string FirstResultStr {
+        public static string FirstResultStr {
             get {
                 return ResourceManager.GetString("FirstResultStr", resourceCulture);
             }
@@ -89,14 +98,17 @@ namespace ConsoleSnail.Resources {
         
         /// <summary>
         ///   Looks up a localized string similar to * Name: Snail
-        ///* Function: 
+        ///* Function:
+        ///- Users input matrix dimensions into the program (columns and lines).
+        ///- Program fill matrix with random numbers (from 0 till 100 included).
+        ///- More on github page
         ///* Author: Oleksandr Leoshko
         ///* Co-author: Maksym Oganesyan
         ///* Date: 14.03.2023
         ///* Copyright (c) 2023
         ///* All right reserved.
         /// </summary>
-        internal static string Greetings {
+        public static string Greetings {
             get {
                 return ResourceManager.GetString("Greetings", resourceCulture);
             }
@@ -105,7 +117,7 @@ namespace ConsoleSnail.Resources {
         /// <summary>
         ///   Looks up a localized string similar to To restart app press Enter. Either Space to exit.
         /// </summary>
-        internal static string RestartOption {
+        public static string RestartOption {
             get {
                 return ResourceManager.GetString("RestartOption", resourceCulture);
             }
@@ -114,7 +126,7 @@ namespace ConsoleSnail.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Enter the number of rows in the matrix: .
         /// </summary>
-        internal static string RowValue {
+        public static string RowValue {
             get {
                 return ResourceManager.GetString("RowValue", resourceCulture);
             }
@@ -123,7 +135,7 @@ namespace ConsoleSnail.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Invalid input. Please enter an integer value for rows..
         /// </summary>
-        internal static string RowValueError {
+        public static string RowValueError {
             get {
                 return ResourceManager.GetString("RowValueError", resourceCulture);
             }
@@ -132,7 +144,7 @@ namespace ConsoleSnail.Resources {
         /// <summary>
         ///   Looks up a localized string similar to 2D Spiral Matrix:.
         /// </summary>
-        internal static string SecondResultStr {
+        public static string SecondResultStr {
             get {
                 return ResourceManager.GetString("SecondResultStr", resourceCulture);
             }
