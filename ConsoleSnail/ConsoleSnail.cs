@@ -1,5 +1,5 @@
-﻿using LibrarySnail;
-using ConsoleSnail.Resources;
+﻿using ConsoleSnail.Resources;
+using LibrarySnail;
 
 namespace ConsoleSnail
 {
@@ -9,7 +9,12 @@ namespace ConsoleSnail
         {
             Console.CursorVisible = true;
             ConsoleKeyInfo Button;
-            Console.WriteLine(Messages.Greetings);
+            for (int i = 0; i < Messages.Greetings.Length; i++)
+            {
+                Console.Write(Messages.Greetings[i]);
+                System.Threading.Thread.Sleep(6);
+            }
+            Console.WriteLine();
             Console.WriteLine();
             do
             {
@@ -23,7 +28,7 @@ namespace ConsoleSnail
                     Console.Write(Messages.RowValue + " ");
                     checkRows = int.TryParse(Console.ReadLine(), out rows);
                     if (!checkRows || rows < 1 || rows > 10)
-                {
+                    {
                         Console.WriteLine(Messages.ValueError);
                         checkRows = false;
                     }
@@ -36,7 +41,7 @@ namespace ConsoleSnail
                     Console.Write(Messages.ColumnValue + " ");
                     checkColumns = int.TryParse(Console.ReadLine(), out columns);
                     if (!checkColumns || columns < 1 || columns > 10)
-                {
+                    {
                         Console.WriteLine(Messages.ValueError);
                         checkColumns = false;
                     }
@@ -81,16 +86,14 @@ namespace ConsoleSnail
                             Console.ForegroundColor = ConsoleColor.Black;
                             Console.Write($"{spiralMatrix[i, j],3} ");
                             Console.ResetColor();
-
                         }
-                        else 
+                        else
                         {
                             Console.Write($"{spiralMatrix[i, j],3} ");
                         }
                     }
                     Console.WriteLine();
                 }
-
                 Console.WriteLine();
                 int diagonalSum = 0;
                 for (int i = 0; i < Math.Min(rows, columns); i++)
