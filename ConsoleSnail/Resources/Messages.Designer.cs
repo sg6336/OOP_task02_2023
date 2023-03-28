@@ -133,6 +133,17 @@ namespace ConsoleSnail.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to - Users input matrix dimensions into the program (columns and lines).
+        ///- Program fill matrix with random numbers (from 0 till 100 included).
+        ///- More on github page.
+        /// </summary>
+        public static string SecondStr {
+            get {
+                return ResourceManager.GetString("SecondStr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Invalid input. Please enter a number between 1 and 10..
         /// </summary>
         public static string ValueError {

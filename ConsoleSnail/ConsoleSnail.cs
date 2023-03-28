@@ -1,5 +1,6 @@
 ﻿using ConsoleSnail.Resources;
 using LibrarySnail;
+using Spectre.Console;
 
 namespace ConsoleSnail
 {
@@ -7,15 +8,41 @@ namespace ConsoleSnail
     {
         static void Main(string[] args)
         {
+            var root = new Tree("Task02");
+
+            var DescStr1 = root.AddNode("Name");
+            var DescStr1Child = DescStr1.AddNode("Snail");
+
+            var DescStr2 = root.AddNode("Function");
+            var DescStr2Child = DescStr2.AddNode(Messages.SecondStr);
+
+            var DescStr3 = root.AddNode("Author");
+            var DescStr3Child = DescStr3.AddNode("Oleksandr Leoshko");
+
+            var DescStr4 = root.AddNode("Co-author");
+            var DescStr4Child = DescStr4.AddNode("Maksyn Oganesyan");
+
+            var DescStr5 = root.AddNode("Date");
+            var DescStr5Child = DescStr5.AddNode("20.03.2023");
+
+            var DescStr6 = root.AddNode("Copyright (c) 2023");
+
+            var DescStr7 = root.AddNode("All rights reserved");
+
+            AnsiConsole.Write(root);
+
+            Console.WriteLine();
+
             Console.CursorVisible = true;
             ConsoleKeyInfo Button;
-            for (int i = 0; i < Messages.Greetings.Length; i++)
-            {
-                Console.Write(Messages.Greetings[i]);
-                System.Threading.Thread.Sleep(6);
-            }
-            Console.WriteLine();
-            Console.WriteLine();
+
+            //for (int i = 0; i < Messages.Greetings.Length; i++)
+            //{
+            //    Console.Write(Messages.Greetings[i]);
+            //    System.Threading.Thread.Sleep(6);
+            //}
+            //Console.WriteLine();
+            //Console.WriteLine();
             do
             {
                 var obj = new Snail();
@@ -102,6 +129,13 @@ namespace ConsoleSnail
                 }
                 Console.WriteLine(Messages.DiagonalSum + " " + diagonalSum);
                 Console.WriteLine();
+
+                //AnsiConsole.Write(new BarChart()
+                //    .Width(100)
+                //    .Label("Sum of elements on main diagonal")
+                //    .CenterLabel()
+                //    .AddItem("Sum", (int)((diagonalSum * 100) / 955), Color.Green)
+                //    );
 
                 Console.WriteLine();
                 Console.WriteLine(Messages.RestartOption);

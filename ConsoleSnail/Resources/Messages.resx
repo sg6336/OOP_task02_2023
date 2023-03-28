@@ -147,6 +147,11 @@
   <data name="SecondResultStr" xml:space="preserve">
     <value>2D Spiral Matrix:</value>
   </data>
+  <data name="SecondStr" xml:space="preserve">
+    <value>- Users input matrix dimensions into the program (columns and lines).
+- Program fill matrix with random numbers (from 0 till 100 included).
+- More on github page</value>
+  </data>
   <data name="ValueError" xml:space="preserve">
     <value>Invalid input. Please enter a number between 1 and 10.</value>
   </data>
