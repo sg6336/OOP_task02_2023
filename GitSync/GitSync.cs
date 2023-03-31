@@ -5,13 +5,12 @@ using Newtonsoft.Json;
 namespace GitSyncing{
     public static class GitSync
     {
-        static string creationDate = "2022-01-01";
         static string lastUpdateDate = "";
 
         public static string GetLastUpdateDate()
         {
             // Retrieve the last update date of your GitHub repository
-            lastUpdateDate = GetLastUpdateDateAsync("thefirans", "OOP_task02_2023").Result;
+            lastUpdateDate = GetLastUpdateDateAsync("thefirans", "OOP_task02_2023", "Oleksandr_Leoshko").Result;
             DateTime originalDate = DateTime.ParseExact(lastUpdateDate, "MM/dd/yyyy HH:mm:ss", null);
             lastUpdateDate = originalDate.ToString("dd.MM.yyyy");
 
@@ -19,25 +18,23 @@ namespace GitSyncing{
             return lastUpdateDate;
         }
 
-        static async System.Threading.Tasks.Task<string> GetLastUpdateDateAsync(string username, string repositoryName)
+        static async System.Threading.Tasks.Task<string> GetLastUpdateDateAsync(string username, string repositoryName, string branch)
         {
-            using (var client = new HttpClient())
+            using var client = new HttpClient();
+            client.DefaultRequestHeaders.Add("User-Agent", "C# console application");
+
+            var response = await client.GetAsync($"https://api.github.com/repos/thefirans/OOP_task02_2023/commits?sha=Oleksandr_Leoshko");
+
+            if (response.IsSuccessStatusCode)
             {
-                client.DefaultRequestHeaders.Add("User-Agent", "C# console application");
+                var json = await response.Content.ReadAsStringAsync();
+                var commits = JsonConvert.DeserializeObject<dynamic>(json);
 
-                var response = await client.GetAsync($"https://api.github.com/repos/thefirans/OOP_task02_2023/commits");
-
-                if (response.IsSuccessStatusCode)
-                {
-                    var json = await response.Content.ReadAsStringAsync();
-                    var commits = JsonConvert.DeserializeObject<dynamic>(json);
-
-                    return commits[0].commit.author.date;
-                }
-                else
-                {
-                    throw new Exception($"Failed to retrieve repository update date: {response.ReasonPhrase}");
-                }
+                return commits[0].commit.author.date;
+            }
+            else
+            {
+                throw new Exception($"Failed to retrieve repository update date: {response.ReasonPhrase}");
             }
         }
     }
