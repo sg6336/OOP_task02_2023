@@ -117,11 +117,29 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AuthorName" xml:space="preserve">
+    <value>Oleksandr Leoshko</value>
+  </data>
+  <data name="AuthorNameNode" xml:space="preserve">
+    <value>Author</value>
+  </data>
+  <data name="CoAuthorName" xml:space="preserve">
+    <value>Maksym Oganesyan</value>
+  </data>
+  <data name="CoAuthorNameNode" xml:space="preserve">
+    <value>Co-author</value>
+  </data>
   <data name="ColumnValue" xml:space="preserve">
-    <value>Enter number of columns (maximum 10):</value>
+    <value>Enter number of columns (maximum 10): </value>
+  </data>
+  <data name="CreatedDate" xml:space="preserve">
+    <value>02.03.2023</value>
+  </data>
+  <data name="CreatedDateNode" xml:space="preserve">
+    <value>Created Date</value>
   </data>
   <data name="DiagonalSum" xml:space="preserve">
-    <value>Sum of elements on main diagonal is:</value>
+    <value>Sum of elements on main diagonal is: </value>
   </data>
   <data name="FirstResultStr" xml:space="preserve">
     <value>1D Spiral Array:</value>
@@ -141,16 +159,37 @@
   <data name="RestartOption" xml:space="preserve">
     <value>To restart app press Enter. Either Space to exit</value>
   </data>
+  <data name="RightsInfo1" xml:space="preserve">
+    <value>Copyright (c) 2023</value>
+  </data>
+  <data name="RightsInfo2" xml:space="preserve">
+    <value>All rights reserved</value>
+  </data>
   <data name="RowValue" xml:space="preserve">
-    <value>Enter number of rows (maximum 10):</value>
+    <value>Enter number of rows (maximum 10): </value>
   </data>
   <data name="SecondResultStr" xml:space="preserve">
     <value>2D Spiral Matrix:</value>
   </data>
-  <data name="SecondStr" xml:space="preserve">
+  <data name="TaskDesc" xml:space="preserve">
     <value>- Users input matrix dimensions into the program (columns and lines).
 - Program fill matrix with random numbers (from 0 till 100 included).
 - More on github page</value>
+  </data>
+  <data name="TaskDescNode" xml:space="preserve">
+    <value>Function</value>
+  </data>
+  <data name="TaskName" xml:space="preserve">
+    <value>Snail</value>
+  </data>
+  <data name="TaskNameNode" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="TaskNum" xml:space="preserve">
+    <value>Task02</value>
+  </data>
+  <data name="UpdatedDateNode" xml:space="preserve">
+    <value>Last Update</value>
   </data>
   <data name="ValueError" xml:space="preserve">
     <value>Invalid input. Please enter a number between 1 and 10.</value>

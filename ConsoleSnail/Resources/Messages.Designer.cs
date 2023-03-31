@@ -61,7 +61,43 @@ namespace ConsoleSnail.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Enter number of columns (maximum 10):.
+        ///   Looks up a localized string similar to Oleksandr Leoshko.
+        /// </summary>
+        public static string AuthorName {
+            get {
+                return ResourceManager.GetString("AuthorName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Author.
+        /// </summary>
+        public static string AuthorNameNode {
+            get {
+                return ResourceManager.GetString("AuthorNameNode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Maksym Oganesyan.
+        /// </summary>
+        public static string CoAuthorName {
+            get {
+                return ResourceManager.GetString("CoAuthorName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Co-author.
+        /// </summary>
+        public static string CoAuthorNameNode {
+            get {
+                return ResourceManager.GetString("CoAuthorNameNode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter number of columns (maximum 10): .
         /// </summary>
         public static string ColumnValue {
             get {
@@ -70,7 +106,25 @@ namespace ConsoleSnail.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sum of elements on main diagonal is:.
+        ///   Looks up a localized string similar to 02.03.2023.
+        /// </summary>
+        public static string CreatedDate {
+            get {
+                return ResourceManager.GetString("CreatedDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Created Date.
+        /// </summary>
+        public static string CreatedDateNode {
+            get {
+                return ResourceManager.GetString("CreatedDateNode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sum of elements on main diagonal is: .
         /// </summary>
         public static string DiagonalSum {
             get {
@@ -115,7 +169,25 @@ namespace ConsoleSnail.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Enter number of rows (maximum 10):.
+        ///   Looks up a localized string similar to Copyright (c) 2023.
+        /// </summary>
+        public static string RightsInfo1 {
+            get {
+                return ResourceManager.GetString("RightsInfo1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All rights reserved.
+        /// </summary>
+        public static string RightsInfo2 {
+            get {
+                return ResourceManager.GetString("RightsInfo2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter number of rows (maximum 10): .
         /// </summary>
         public static string RowValue {
             get {
@@ -137,9 +209,54 @@ namespace ConsoleSnail.Resources {
         ///- Program fill matrix with random numbers (from 0 till 100 included).
         ///- More on github page.
         /// </summary>
-        public static string SecondStr {
+        public static string TaskDesc {
             get {
-                return ResourceManager.GetString("SecondStr", resourceCulture);
+                return ResourceManager.GetString("TaskDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Function.
+        /// </summary>
+        public static string TaskDescNode {
+            get {
+                return ResourceManager.GetString("TaskDescNode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Snail.
+        /// </summary>
+        public static string TaskName {
+            get {
+                return ResourceManager.GetString("TaskName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        public static string TaskNameNode {
+            get {
+                return ResourceManager.GetString("TaskNameNode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Task02.
+        /// </summary>
+        public static string TaskNum {
+            get {
+                return ResourceManager.GetString("TaskNum", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Last Update.
+        /// </summary>
+        public static string UpdatedDateNode {
+            get {
+                return ResourceManager.GetString("UpdatedDateNode", resourceCulture);
             }
         }
         

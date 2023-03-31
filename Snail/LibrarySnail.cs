@@ -2,11 +2,10 @@
 {
     public class Snail
     {
-        public int[] ReadAsSpiral(int[,] matrix, out int[,] spiralMatrix)
+        public int[] ReadAsSpiral(int[,] matrix)
         {
             int width = matrix.GetLength(1);
             int height = matrix.GetLength(0);
-            spiralMatrix = new int[height, width];
             var array = new int[width * height];
             int index = 0;
             int minX = 0;
@@ -19,8 +18,7 @@
                     break;
                 for (int i = minX; i <= maxX; i++)
                 {
-                    array[index] = matrix[minY, i];
-                    spiralMatrix[minY, i] = array[index++];
+                    array[index++] = matrix[minY, i];
                 }
                 minY++;
 
@@ -28,8 +26,7 @@
                     break;
                 for (int i = minY; i <= maxY; i++)
                 {
-                    array[index] = matrix[i, maxX];
-                    spiralMatrix[i, maxX] = array[index++];
+                    array[index++] = matrix[i, maxX];
                 }
                 maxX--;
 
@@ -37,8 +34,7 @@
                     break;
                 for (int i = maxX; i >= minX; i--)
                 {
-                    array[index] = matrix[maxY, i];
-                    spiralMatrix[maxY, i] = array[index++];
+                    array[index++] = matrix[maxY, i];
                 }
                 maxY--;
 
@@ -46,8 +42,7 @@
                     break;
                 for (int i = maxY; i >= minY; i--)
                 {
-                    array[index] = matrix[i, minX];
-                    spiralMatrix[i, minX] = array[index++];
+                    array[index++] = matrix[i, minX];
                 }
                 minX++;
             }
