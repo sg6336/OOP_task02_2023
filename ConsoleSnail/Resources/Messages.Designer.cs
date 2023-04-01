@@ -22,7 +22,7 @@ namespace ConsoleSnail.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Messages {
+    public class Messages {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace ConsoleSnail.Resources {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ConsoleSnail.Resources.Messages", typeof(Messages).Assembly);
@@ -51,7 +51,7 @@ namespace ConsoleSnail.Resources {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -61,27 +61,81 @@ namespace ConsoleSnail.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Enter the number of columns in the matrix: .
+        ///   Looks up a localized string similar to Oleksandr Leoshko.
         /// </summary>
-        internal static string ColumnValue {
+        public static string AuthorName {
+            get {
+                return ResourceManager.GetString("AuthorName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Author.
+        /// </summary>
+        public static string AuthorNameNode {
+            get {
+                return ResourceManager.GetString("AuthorNameNode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Maksym Oganesyan.
+        /// </summary>
+        public static string CoAuthorName {
+            get {
+                return ResourceManager.GetString("CoAuthorName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Co-author.
+        /// </summary>
+        public static string CoAuthorNameNode {
+            get {
+                return ResourceManager.GetString("CoAuthorNameNode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter number of columns (maximum 10): .
+        /// </summary>
+        public static string ColumnValue {
             get {
                 return ResourceManager.GetString("ColumnValue", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Invalid input. Please enter an integer value for columns..
+        ///   Looks up a localized string similar to 02.03.2023.
         /// </summary>
-        internal static string ColumnValueError {
+        public static string CreatedDate {
             get {
-                return ResourceManager.GetString("ColumnValueError", resourceCulture);
+                return ResourceManager.GetString("CreatedDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Created Date.
+        /// </summary>
+        public static string CreatedDateNode {
+            get {
+                return ResourceManager.GetString("CreatedDateNode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sum of elements on main diagonal is: .
+        /// </summary>
+        public static string DiagonalSum {
+            get {
+                return ResourceManager.GetString("DiagonalSum", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to 1D Spiral Array:.
         /// </summary>
-        internal static string FirstResultStr {
+        public static string FirstResultStr {
             get {
                 return ResourceManager.GetString("FirstResultStr", resourceCulture);
             }
@@ -89,14 +143,17 @@ namespace ConsoleSnail.Resources {
         
         /// <summary>
         ///   Looks up a localized string similar to * Name: Snail
-        ///* Function: 
+        ///* Function:
+        ///- Users input matrix dimensions into the program (columns and lines).
+        ///- Program fill matrix with random numbers (from 0 till 100 included).
+        ///- More on github page
         ///* Author: Oleksandr Leoshko
         ///* Co-author: Maksym Oganesyan
         ///* Date: 14.03.2023
         ///* Copyright (c) 2023
         ///* All right reserved.
         /// </summary>
-        internal static string Greetings {
+        public static string Greetings {
             get {
                 return ResourceManager.GetString("Greetings", resourceCulture);
             }
@@ -105,36 +162,110 @@ namespace ConsoleSnail.Resources {
         /// <summary>
         ///   Looks up a localized string similar to To restart app press Enter. Either Space to exit.
         /// </summary>
-        internal static string RestartOption {
+        public static string RestartOption {
             get {
                 return ResourceManager.GetString("RestartOption", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Enter the number of rows in the matrix: .
+        ///   Looks up a localized string similar to Copyright (c) 2023.
         /// </summary>
-        internal static string RowValue {
+        public static string RightsInfo1 {
+            get {
+                return ResourceManager.GetString("RightsInfo1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All rights reserved.
+        /// </summary>
+        public static string RightsInfo2 {
+            get {
+                return ResourceManager.GetString("RightsInfo2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter number of rows (maximum 10): .
+        /// </summary>
+        public static string RowValue {
             get {
                 return ResourceManager.GetString("RowValue", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Invalid input. Please enter an integer value for rows..
+        ///   Looks up a localized string similar to 2D Spiral Matrix:.
         /// </summary>
-        internal static string RowValueError {
+        public static string SecondResultStr {
             get {
-                return ResourceManager.GetString("RowValueError", resourceCulture);
+                return ResourceManager.GetString("SecondResultStr", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 2D Spiral Matrix:.
+        ///   Looks up a localized string similar to - Users input matrix dimensions into the program (columns and lines).
+        ///- Program fill matrix with random numbers (from 0 till 100 included).
+        ///- More on github page.
         /// </summary>
-        internal static string SecondResultStr {
+        public static string TaskDesc {
             get {
-                return ResourceManager.GetString("SecondResultStr", resourceCulture);
+                return ResourceManager.GetString("TaskDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Function.
+        /// </summary>
+        public static string TaskDescNode {
+            get {
+                return ResourceManager.GetString("TaskDescNode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Snail.
+        /// </summary>
+        public static string TaskName {
+            get {
+                return ResourceManager.GetString("TaskName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        public static string TaskNameNode {
+            get {
+                return ResourceManager.GetString("TaskNameNode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Task02.
+        /// </summary>
+        public static string TaskNum {
+            get {
+                return ResourceManager.GetString("TaskNum", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Last Update.
+        /// </summary>
+        public static string UpdatedDateNode {
+            get {
+                return ResourceManager.GetString("UpdatedDateNode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid input. Please enter a number between 1 and 10..
+        /// </summary>
+        public static string ValueError {
+            get {
+                return ResourceManager.GetString("ValueError", resourceCulture);
             }
         }
     }
